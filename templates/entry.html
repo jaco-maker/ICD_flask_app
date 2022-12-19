@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<h2>{{ the_title }}</h2>
+<!-- form data is sent to the page specified by the action attribute -->
+<!-- POST tells the app that you are trying to post information to the website -->
+<form method = 'POST' action = '/search4'>
+    <table> 
+        <p>Use this form to submit a search request:</p>
+        <!-- the name attribute of input creates a reference for the user input -->
+        <!-- This is the same thing as creating a variable name -->
+        <tr><td>Code:</td><td><input name='code' type='TEXT' width='60'></td></tr>
+        <tr><td>Description:</td><td><input name="des" type='TEXT' width='150'></td></tr>
+        <tr><td>Confidence:</td><td><input name="confidence" type = "range" min = "1" max = "100" vaue = "50"></td></tr>
+    </table>
+    <p>When you're ready push this button:</p>
+    <!-- inputs with type='SUBMIT' are rendered as buttons -->
+    <!-- when clicked the form that the input is nested under is submitted-->
+    <p><input value="Go" type="SUBMIT"></p>
+</form>
+{% endblock %}

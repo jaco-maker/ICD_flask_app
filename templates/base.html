@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{{ the_title }}</title>
+        <link rel = "stylesheet" href="static/hf.css" />
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+        <!-- use the name of the function defined in def, not the http path -->
+                <li> <a href = {{ url_for('entry_page') }}>HOME</a></li>
+                <li><a href = {{ url_for('view_the_log') }}>DATA</a></li>
+                <li><a href = {{ url_for('view_the_db') }}>DB</a></li>
+            </ul>
+        </nav>
+
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
